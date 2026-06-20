@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn TV Mozaïek</title>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .mozaiek-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .mozaiek-item {
+            background-color: #222;
+            border: 3px solid transparent;
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 16 / 9;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+        .mozaiek-item:focus, .mozaiek-item:hover {
+            border-color: #3b82f6;
+            background-color: #333;
+            transform: scale(1.05);
+            outline: none;
+        }
+        .mozaiek-item img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mozaiek-container">
+        <!-- VRT ZENDERS -->
+        <a href="https://www.vrt.be/vrtmax/livestream/video/vrt1/" class="mozaiek-item">                  
+            <img src="https://githubusercontent.com" alt="VRT 1">
+        </a>
+        <a href="https://www.vrt.be/vrtmax/livestream/video/vrt-canvas/" class="mozaiek-item">                  
+            <img src="https://githubusercontent.com" alt="VRT Canvas">
+        </a>
+
+        <!-- PLAY ZENDERS -->
+        <a href="https://www.play.tv/live-kijken/play" class="mozaiek-item">                  
+            <img src="https://githubusercontent.com" alt="Play">
+        </a>
+        <a href="https://www.play.tv/live-kijken/play-fictie" class="mozaiek-item">                  
+            <img src="https://githubusercontent.com" alt="Play Fictie">
+        </a>
+        <a href="https://play.tv" class="mozaiek-item">                  
+            <img src="https://githubusercontent.com" alt="Play Actie">
+        </a>
+        <a href="https://play.tv" class="mozaiek-item">                  
+            <img src="https://githubusercontent.com" alt="Play Reality">
+        </a>
+        <a href="https://play.tv" class="mozaiek-item">                  
+            <img src="https://githubusercontent.com" alt="Play Crime">
+        </a>
+
+        <!-- VTM ZENDERS -->
+        <a href="https://vtmgo.be" class="mozaiek-item">                  
+            <img src="https://githubusercontent.com" alt="VTM">
+        </a>
+        <a href="https://vtmgo.be" class="mozaiek-item">                  
+            <img src="https://githubusercontent.com" alt="VTM 2">
+        </a>
+        <a href="https://vtmgo.be" class="mozaiek-item">                  
+            <img src="https://githubusercontent.com" alt="VTM 3">
+        </a>
+        <a href="https://vtmgo.be" class="mozaiek-item">                  
+            <img src="https://githubusercontent.com" alt="VTM 4">
+        </a>
+		
+		<!-- PLEX -->
+		<a href="http://192.168.178.42:32400/web/index.html#!/" target="_blank" class="mozaiek-item">	          
+            <img src="https://githubusercontent.com" alt="PLEX">
+		</a>		
+		
+		<!-- Npo1 -->
+	    <a href="https://www.npo.nl/start/live/npo1" target="_blank" class="mozaiek-item">	          
+            <img src="https://githubusercontent.com" alt="Npo1">
+		</a>
+		
+		<!-- Npo2 -->
+	    <a href="https://www.npo.nl/start/live/npo2" target="_blank" class="mozaiek-item">	          
+            <img src="https://githubusercontent.com" alt="Npo2">
+		</a>
+		
+		<!-- Npo3 -->
+	    <a href="https://www.npo.nl/start/live/npo3" target="_blank" class="mozaiek-item">	          
+            <img src="https://githubusercontent.com" alt="Npo3>
+		</a>		
+		
+		<!-- RINGTV -->
+		<a href="https://ringtv.be/kijk-ring" target="_blank" class="mozaiek-item">	          
+            <img src="https://githubusercontent.com" alt="RINGTV>
+		</a>
+		
+		<!-- ROBTV -->
+		<a href="https://www.robtv.be/website" target="_blank" class="mozaiek-item">	          
+            <img src="https://githubusercontent.com" alt="ROBTV">
+		</a>
+		
+		<!-- La Une -->
+		<a href="https://auvio.rtbf.be/chaine/la-une-1" target="_blank" class="mozaiek-item">	          
+            <img src="https://githubusercontent.com" alt="La Une">
+		</a>
+		
+		<!-- Tipik -->
+		<a href="https://auvio.rtbf.be/chaine/tipik-32" target="_blank" class="mozaiek-item">	          
+            <img src="https://githubusercontent.com" alt="Tipik">
+		</a>
+		
+		<!-- La Trois -->
+		<a href="https://auvio.rtbf.be/chaine/la-trois-3" target="_blank" class="mozaiek-item">	          
+           <img src="https://githubusercontent.com" alt="La Trois">
+		</a>
+		
+		
+    </div>
+
+</body>
+</html>
