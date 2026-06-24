@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>  
-	<meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn TV Mozaïek</title>
+    <title>Mijn TV Mozaïek & EPG</title>
     <style>
         body {
             background-color: #111;
@@ -12,17 +12,27 @@
             margin: 0;
             padding: 15px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
         }
+        h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #aaa;
+        }
         .mozaiek-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
             width: 100%;
             max-width: 1400px;
+        }
+        .zender-blok {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
         .mozaiek-item {
             background-color: #222;
@@ -39,7 +49,7 @@
         .mozaiek-item:focus, .mozaiek-item:hover {
             border-color: #3b82f6;
             background-color: #333;
-            transform: scale(1.05);
+            transform: scale(1.03);
             outline: none;
         }
         .mozaiek-item img {
@@ -47,83 +57,82 @@
             max-height: 65%;
             object-fit: contain;
         }
+        .epg-button {
+            background-color: #333;
+            color: #3b82f6;
+            border: 2px solid transparent;
+            border-radius: 6px;
+            padding: 6px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .epg-button:focus, .epg-button:hover {
+            background-color: #3b82f6;
+            color: white;
+            border-color: white;
+            outline: none;
+        }
     </style>
 </head>
-	
 <body>
+
+    <h1>Mijn Digitale TV Gids</h1>
+
     <div class="mozaiek-container">
-        <!-- VRT ZENDERS -->
-        <a href="vrtnu://" class="mozaiek-item">                  
-            <img src="vrtmax.png" alt="VRT 1">
-        </a>
-        <a href="vrtnu:/vrtnu/livestream/videos/vrt-canvas" class="mozaiek-item">                  
-            <img src="canvas-be.png" alt="VRT Canvas">
-        </a>
+        
+        <!-- VRT 1 -->
+        <div class="zender-blok">
+            <a href="vrtnu://" class="mozaiek-item">                  
+                <img src="een-be.png" alt="VRT 1">
+            </a>
+            <a href="https://vrt.be" class="epg-button">VRT 1 GIDS</a>
+        </div>
 
-        <!-- PLAY ZENDERS -->
-        <a href="playtv://"  class="mozaiek-item">                  
-            <img src="play.png" alt="Play">
-        </a>
-        <a href=""playtv://www.play.tv/live-kijken/play-fictie" class="mozaiek-item">                  
-            <img src="playfictie.png" alt="Play Fictie">
-        </a>
-        <a href=""playtv://www.play.tv" class="mozaiek-item">                  
-            <img src="playactie.png" alt="Play Actie">
-        </a>
-        <a href="https:/play.tv"class="mozaiek-item">                  
-            <img src="playreality.png" alt="Play Reality">
-        </a>
-        <a href="https://goplay.be" target="_self" class="mozaiek-item">                  
-            <img src="playcrime.jpg" alt="Play Crime">
-        </a>
+        <!-- VRT CANVAS -->
+        <div class="zender-blok">
+            <a href="vrtnu://" class="mozaiek-item">                  
+                <img src="canvas.png" alt="Canvas">
+            </a>
+            <a href="https://vrt.be" class="epg-button">CANVAS GIDS</a>
+        </div>
 
-        <!-- VTM ZENDERS -->
-        <a href="vtmgo://www.vtmgo.be" class="mozaiek-item">                  
-            <img src="vtmgo.png" alt="VTMGO">
-        </a>
-      					
-		<!-- Npo1 -->
-	    <a href="https://www.npo.nl/start/live/npo1" target="_blank" class="mozaiek-item">	          
-            <img src="npo1-nl.png" alt="NPO 1">
-		</a>
-		
-		<!-- Npo2 -->
-	    <a href="https://www.npo.nl/start/live/npo2" target="_blank" class="mozaiek-item">	          
-            <img src="npo2-nl.png" alt="NPO 2">
-		</a>
-		
-		<!-- Npo3 -->
-	    <a href="https://www.npo.nl/start/live/npo3" target="_blank" class="mozaiek-item">	          
-            <img src="npo3-nl.png" alt="NPO 3">
-		</a>		
-		
-		<!-- RINGTV -->
-		<a href="https://ringtv.be/kijk-ring" target="_blank" class="mozaiek-item">	          
-            <img src="ringtv.png" alt="RING TV">
-		</a>
-		
-		<!-- ROBTV -->
-		<a href="https://www.robtv.be/website" target="_blank" class="mozaiek-item">	          
-            <img src="robtv.jpg" alt="ROB TV">
-		</a>
-		
-		<!-- La Une -->
-		<a href="https://rtbf.be" target="_blank" class="mozaiek-item">	          
-            <img src="la-une-be.png" alt="La Une">
-		</a>
-		
-		<!-- Tipik -->
-		<a href="https://auvio.rtbf.be/chaine/tipik-32" target="_blank" class="mozaiek-item">	          
-            <img src="tipik-be.png" alt="Tipik">
-		</a>
-		
-		<!-- La Trois -->
-		<a href="https://auvio.rtbf.be/chaine/la-trois-3" target="_blank" class="mozaiek-item">	          
-           <img src="la-trois-be.png" alt="La Trois">
-		</a>
-		
-		
+        <!-- VTM  -->
+        <div class="zender-blok">
+            <a href="vtmgo://www.vtmgo.be" class="mozaiek-item">                  
+                <img src="vtmgo.png" alt="VTM">
+            </a>
+            <a href="https://vtm.be" class="epg-button">VTM GIDS</a>
+        </div>
+
+        <!-- PLAY  -->
+        <div class="zender-blok">
+            <a href="playtv://" class="mozaiek-item">                  
+                <img src="play.png" alt="Play">
+            </a>
+            <a href="https://play.tv" class="epg-button">PLAY GIDS</a>
+        </div>
+
+        <!-- PLAY FICTION -->
+        <div class="zender-blok">
+            <a href="playtv://" class="mozaiek-item">                  
+                <img src="playfiction.png" alt="Play FICTION">
+            </a>
+            <a href="https://play.tv" class="epg-button">PLAY FICTION GIDS</a>
+        </div>
+
+        <!-- RTBF LA UNE -->
+        <div class="zender-blok">
+            <a href="https://auvio.rtbf.be" class="mozaiek-item">                  
+                <img src="la-une.png" alt="RTBF Auvio">
+            </a>
+            <a href="https://rtbf.be" class="epg-button">RTBF GIDS</a>
+        </div>
+
     </div>
 
 </body>
+</html>
 </html>
